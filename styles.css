@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+html {
+  line-height: 1.15;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-photo/abstract-bluish-paint-background-wallpaper_53876-97482.jpg?w=826&t=st=1693627781~exp=1693628381~hmac=74b8b008fad7356089ddeb234d5c49530cffbcf96e18f647571b775d4c9f2ec6"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+.App {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.buttons button {
+  background-color: #433aa8;
+  color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition for 3D effect */
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); /* Added box-shadow for 3D effect */
+}
+
+.buttons button:hover {
+  background-color: #271c6c;
+  transform: scale(1.05);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced 3D effect on hover */
+}
+
+
+.App h1 {
+  display: inline;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #e1ebfd;
+  text-shadow: 0 0 5px #433aa8, 3px -1px 5px #271c6c;
+  font-size: 2.5rem; /* Adjust the font size as needed */
+  letter-spacing: 2px;
+}
+
+/* Input container styles */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#searchInput {
+  min-width: 15rem;
+  width: 40vw;
+  max-height: 2.5rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #433aa8;
+}
+
+#searchInput:focus {
+  outline: none;
+  border: 2px solid rgb(67, 58, 168);
+}
+
+#searchBtn,
+#voiceSearchBtn {
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+#searchBtn:hover,
+#voiceSearchBtn:hover {
+  background-color: #433aa8;
+  transform: scale(1.05);
+}
+
+.addTodos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.input-container input[type="text"],
+.input-container input[type="datetime-local"],
+.input-container select {
+  min-width: 12rem;
+  width: 30%;
+  max-height: 3rem;
+  background-color: #e1ebfd;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: #433aa8;
+}
+
+.input-container input[type="datetime-local"] {
+  max-height: 3.5rem;
+}
+
+.add-btn {
+  background-color: #271c6c;
+  color: #e1ebfd;
+  border-radius: 50%;
+  border: 2px solid #e1ebfd;
+  font-size: 1.7rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px #271c6c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #433aa8;
+  transform: scale(1.05);
+}
+
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    hsla(237, 34%, 78%, 0.9) 0%,
+    hsla(219, 88%, 94%, 0.9) 100%
+  );
+  margin: 1rem;
+  width: 22rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s; /* Added transitions for 3D effect */
+}
+
+.card.completed {
+  background: rgba(135, 123, 205, 0.8);
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Move the card up on hover */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Enhanced 3D effect on hover */
+}
+
+
+.card .content {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #433aa8;
+}
+
+.card .btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+}
+
+.card .btns button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: green;
+  transition: transform 0.3s;
+}
+
+.card .btns button:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 640px) {
+  .App {
+    margin-top: 2rem;
+  }
+
+  #searchInput {
+    width: 80%;
+  }
+
+  .addTodos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-btn {
+    margin-top: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .buttons button {
+    margin: 0.5rem 0;
+  }
+
+  .task-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-right: 0;
+  }
+}
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #433aa8;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* 3D effect box-shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transitions for 3D effect */
+}
+
+.box:hover {
+  transform: translate(5px, 5px); /* Move the box slightly on hover */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Enhanced 3D effect on hover */
+}
+.custom-alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.custom-alert button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+

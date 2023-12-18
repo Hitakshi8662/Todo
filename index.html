@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="customAlert" class="custom-alert">
+        <p id="alertText"></p>
+        <button onclick="closeCustomAlert()">Close</button>
+    </div>
+    <div class="App">
+        <h1>Todo List</h1>
+        <div class="input-container">
+            <input type="text" id="searchInput" placeholder="&#128269; Search tasks">
+            <button id="searchBtn">&#128269;</button>
+            <button id="voiceSearchBtn" title="Voice Search">&#128266;</button>
+        </div>
+        
+        <div class="container">
+            <div class="addTodos">
+                <div class="input-container">
+                    <input type="text" id="task" placeholder="Enter a task">
+                    <input type="datetime-local" id="taskTime">
+                    <select id="taskType" >
+                        <option value="professional">Professional</option>
+                        <option value="study">Study</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div id="addBtn" class="add-btn">+</div>
+                </div>
+                
+            </div>
+            
+          
+            <div class="buttons">
+                <button id="allTasksBtn">All </button>
+                <button id="completedTasksBtn">Completed</button>
+                <button id="uncompletedTasksBtn">Incompleted</button>
+                
+
+            </div>
+            
+
+            <div id="taskContainer" class="task-container">
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
